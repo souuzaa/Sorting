@@ -3,10 +3,10 @@ using System.Diagnostics;
 using Sorting;
 using Sorting.Methods;
 
-void Run(ISort method)
+static void Run(ISort method)
 {
     int[] data = new int[10] { 10, 8, 9, 4, 6, 5, 7, 2, 3, 1 };
-    Stopwatch stop = new Stopwatch();
+    Stopwatch stop = new();
 
     Console.WriteLine(method.GetType().ToString());
     stop.Start();
@@ -21,3 +21,4 @@ void Run(ISort method)
 
 Run(new BubbleSort());
 Run(new InsertionSort());
+Run(new MergeSort());
